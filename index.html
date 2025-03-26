@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+  overflow: hidden; /* Ensures the animation stays within the container */
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  animation: moveDiagonally 4s linear forwards; /* Animation setup */
+}
+
+@keyframes moveDiagonally {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 350px;
+    left: 350px;
+  }
+}
+</style>
+<body>
+
+<p>
+<button onclick="startAnimation()">Click Me</button>
+</p>
+
+<div id="myContainer">
+  <div id="myAnimation"></div>
+</div>
+
+<script>
+function startAnimation() {
+  const elem = document.getElement
